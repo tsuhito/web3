@@ -1,5 +1,6 @@
 node_modules
 .env
+remind.txt
 
 # Hardhat files
 /cache
