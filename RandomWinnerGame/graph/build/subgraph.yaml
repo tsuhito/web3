@@ -1,6 +1,6 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: RandomWinnerGame
@@ -20,7 +20,7 @@ dataSources:
         - PlayerJoined
       abis:
         - name: RandomWinnerGame
-          file: ./abis/RandomWinnerGame.json
+          file: RandomWinnerGame\abis\RandomWinnerGame.json
       eventHandlers:
         - event: GameEnded(uint256,address,bytes32)
           handler: handleGameEnded
@@ -30,4 +30,4 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: PlayerJoined(uint256,address)
           handler: handlePlayerJoined
-      file: ./src/random-winner-game.ts
+      file: RandomWinnerGame\RandomWinnerGame.wasm
