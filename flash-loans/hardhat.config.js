@@ -1,0 +1,16 @@
+require("dotenv").config();
+require("@nomicfoundation/hardhat-toolbox");
+
+const QUICKNODE_RPC_URL = process.env.QUICKNODE_RPC_URL;
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: "0.8.10",
+  networks: {
+    hardhat: {
+      forking: {
+        url: QUICKNODE_RPC_URL,
+      },
+    },
+  },
+};
